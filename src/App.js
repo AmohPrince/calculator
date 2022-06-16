@@ -22,12 +22,11 @@ function App() {
 
   //calculating stage
   const calculate = (operator) => {
-    if (operator === "add") {
-      setStage("calculating");
-      setFirstValue(value);
-      setValue("");
-      setOperator(operator);
-    }
+    console.log(operator);
+    setStage("calculating");
+    setFirstValue(value);
+    setValue("");
+    setOperator(operator);
   };
 
   useEffect(() => {
@@ -35,12 +34,24 @@ function App() {
   }, [value]);
 
   const showAnswer = () => {
-    switch (operator) {
-      case "add":
-        const result = firstValue + secondValue;
-        setStage("answer");
-        return setAnswer(result);
+    console.log(firstValue + "first-value");
+    console.log(secondValue + "second-value");
+    console.log(operator + " operator ");
+
+    if (operator === "add") {
+      const result = parseFloat(firstValue) + parseFloat(secondValue);
+      setAnswer(result);
+    } else if (operator === "subtract") {
+      const result = parseFloat(firstValue) - parseFloat(secondValue);
+      setAnswer(result);
+    } else if (operator === "divide") {
+      const result = parseFloat(firstValue) / parseFloat(secondValue);
+      setAnswer(result);
+    } else if (operator === "multiply") {
+      const result = parseFloat(firstValue) * parseFloat(secondValue);
+      setAnswer(result);
     }
+    setStage("answer");
   };
 
   return (
@@ -76,6 +87,7 @@ function App() {
         setSecondValue={setSecondValue}
         setStage={setStage}
         setOperator={setOperator}
+        setAnswer={setAnswer}
       />
     </div>
   );

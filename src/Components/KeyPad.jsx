@@ -8,6 +8,7 @@ const KeyPad = ({
   setSecondValue,
   setStage,
   setOperator,
+  setAnswer,
 }) => {
   const handleChangeValue = (value) => {
     setValue((prevValue) => prevValue.concat(value));
@@ -103,7 +104,14 @@ const KeyPad = ({
       >
         3
       </div>
-      <div className="grid-items">-</div>
+      <div
+        className="grid-items"
+        onClick={() => {
+          calculate("subtract");
+        }}
+      >
+        -
+      </div>
       <div
         className="grid-items"
         onClick={() => {
@@ -120,8 +128,22 @@ const KeyPad = ({
       >
         0
       </div>
-      <div className="grid-items">/</div>
-      <div className="grid-items">*</div>
+      <div
+        className="grid-items"
+        onClick={() => {
+          calculate("divide");
+        }}
+      >
+        /
+      </div>
+      <div
+        className="grid-items"
+        onClick={() => {
+          calculate("multiply");
+        }}
+      >
+        *
+      </div>
       <div
         className="reset"
         onClick={() => {
@@ -129,6 +151,7 @@ const KeyPad = ({
           setSecondValue(0);
           setStage("");
           setOperator("");
+          setAnswer("");
         }}
       >
         RESET
