@@ -1,0 +1,57 @@
+.keypad {
+  background-color: hsl(223, 31%, 20%);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  gap: 20px;
+}
+.keypad > div {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: var(--border-radius);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.grid-items {
+  border-bottom: 3px solid #b0a49f;
+  color: #484c56;
+  background-color: #eae3db;
+}
+.grid-items:hover {
+  background-color: #ffffff;
+  transition: background-color 400ms ease-out;
+}
+.reset,
+.del {
+  border-bottom: 3px solid #3f4b6b;
+}
+.reset:hover,
+.del:hover {
+  background-color: #a2b3e1;
+  transition: background-color 400ms ease-out;
+}
+
+.reset,
+.del,
+.equals {
+  color: #fff;
+  background-color: #647299;
+}
+.reset {
+  /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-column: 1 / 3; */
+  grid-column: span 2;
+}
+.equals {
+  grid-column: span 2;
+  background-color: #d13f30;
+  border-bottom: 3px solid #932315;
+}
+.equals:hover {
+  background-color: #f96c5b;
+  transition: background-color 400ms ease-out;
+}
