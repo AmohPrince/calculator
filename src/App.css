@@ -81,3 +81,14 @@
   aspect-ratio: 1 / 1;
   cursor: pointer;
 }
+@media screen and (max-width: 1150px) {
+  .App {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .App {
+    width: 90%;
+  }
+}

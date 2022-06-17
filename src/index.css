@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
+}
+*:not(.grid-items) {
   transition: color, background-color 3s ease-out;
 }
 
