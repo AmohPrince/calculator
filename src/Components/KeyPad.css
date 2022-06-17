@@ -1,11 +1,19 @@
 .keypad {
-  background-color: hsl(223, 31%, 20%);
   padding: 20px;
   border-radius: var(--border-radius);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 50px);
   gap: 20px;
+}
+.keypad.theme-one {
+  background-color: hsl(223, 31%, 20%);
+}
+.keypad.theme-two {
+  background-color: #d3cdcd;
+}
+.keypad.theme-three {
+  background-color: #1e0836;
 }
 .keypad > div {
   text-align: center;
@@ -15,30 +23,65 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.grid-items {
+.grid-items.theme-one {
   border-bottom: 3px solid #b0a49f;
-  color: #484c56;
   background-color: #eae3db;
+  color: #484c56;
+}
+.grid-items.theme-two {
+  color: #000;
+  background-color: #e5e4e0;
+  border-bottom: 3px solid #a59c92;
+}
+.grid-items.theme-three {
+  border-bottom: 3px solid #b819ec;
+  color: #dfc441;
+  background-color: #331b4d;
 }
 .grid-items:hover {
   background-color: #ffffff;
   transition: background-color 400ms ease-out;
 }
-.reset,
-.del {
-  border-bottom: 3px solid #3f4b6b;
+.grid-items.theme-three:hover {
+  background-color: #6b34ac;
 }
+
 .reset:hover,
 .del:hover {
-  background-color: #a2b3e1;
   transition: background-color 400ms ease-out;
+}
+.del.theme-one:hover,
+.reset.theme-one:hover {
+  background-color: #a2b3e1;
+}
+.del.theme-two:hover,
+.reset.theme-two:hover {
+  background-color: #62b5bd;
+}
+.del.theme-three:hover,
+.reset.theme-three:hover {
+  background-color: #8631b0;
 }
 
 .reset,
 .del,
 .equals {
   color: #fff;
+}
+.del.theme-one,
+.reset.theme-one {
   background-color: #647299;
+  border-bottom: 3px solid #3f4b6b;
+}
+.del.theme-two,
+.reset.theme-two {
+  background-color: #388187;
+  border-bottom: 3px solid #1b6166;
+}
+.del.theme-three,
+.reset.theme-three {
+  background-color: #56077c;
+  border-bottom: 3px solid #b819ec;
 }
 .reset {
   /* grid-column-start: 1;
@@ -48,10 +91,28 @@
 }
 .equals {
   grid-column: span 2;
-  background-color: #d13f30;
+}
+.equals.theme-one {
   border-bottom: 3px solid #932315;
+  background-color: #d13f30;
+}
+.equals.theme-two {
+  background-color: #c85401;
+  border-bottom: 3px solid #8a3900;
+}
+.equals.theme-three {
+  border-bottom: 3px solid #66fcf2;
+  background-color: #00decf;
 }
 .equals:hover {
-  background-color: #f96c5b;
   transition: background-color 400ms ease-out;
+}
+.equals.theme-one:hover {
+  background-color: #f96c5b;
+}
+.equals.theme-two:hover {
+  background-color: #ff8b38;
+}
+.equals.theme-three:hover {
+  background-color: #94fff9;
 }

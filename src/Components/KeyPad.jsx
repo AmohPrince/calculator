@@ -9,15 +9,16 @@ const KeyPad = ({
   setStage,
   setOperator,
   setAnswer,
+  theme,
 }) => {
   const handleChangeValue = (value) => {
     setValue((prevValue) => prevValue.concat(value));
   };
 
   return (
-    <div className="keypad">
+    <div className={`keypad ${theme}`}>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("7");
         }}
@@ -25,7 +26,7 @@ const KeyPad = ({
         7
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("8");
         }}
@@ -33,7 +34,7 @@ const KeyPad = ({
         8
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("9");
         }}
@@ -41,7 +42,7 @@ const KeyPad = ({
         9
       </div>
       <div
-        className="del"
+        className={`del ${theme}`}
         onClick={() => {
           setValue((prevValue) => prevValue.slice(0, -1));
         }}
@@ -49,7 +50,7 @@ const KeyPad = ({
         DEL
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("4");
         }}
@@ -57,7 +58,7 @@ const KeyPad = ({
         4
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("5");
         }}
@@ -65,7 +66,7 @@ const KeyPad = ({
         5
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("6");
         }}
@@ -73,7 +74,7 @@ const KeyPad = ({
         6
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           calculate("add");
         }}
@@ -81,7 +82,7 @@ const KeyPad = ({
         +
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("1");
         }}
@@ -89,7 +90,7 @@ const KeyPad = ({
         1
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("2");
         }}
@@ -97,7 +98,7 @@ const KeyPad = ({
         2
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("3");
         }}
@@ -105,7 +106,7 @@ const KeyPad = ({
         3
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           calculate("subtract");
         }}
@@ -113,7 +114,7 @@ const KeyPad = ({
         -
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue(".");
         }}
@@ -121,7 +122,7 @@ const KeyPad = ({
         .
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           handleChangeValue("0");
         }}
@@ -129,7 +130,7 @@ const KeyPad = ({
         0
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           calculate("divide");
         }}
@@ -137,7 +138,7 @@ const KeyPad = ({
         /
       </div>
       <div
-        className="grid-items"
+        className={`grid-items ${theme}`}
         onClick={() => {
           calculate("multiply");
         }}
@@ -145,7 +146,7 @@ const KeyPad = ({
         *
       </div>
       <div
-        className="reset"
+        className={`reset ${theme}`}
         onClick={() => {
           setValue("");
           setSecondValue(0);
@@ -156,7 +157,7 @@ const KeyPad = ({
       >
         RESET
       </div>
-      <div className="equals" onClick={() => showAnswer()}>
+      <div className={`equals ${theme}`} onClick={() => showAnswer()}>
         =
       </div>
     </div>

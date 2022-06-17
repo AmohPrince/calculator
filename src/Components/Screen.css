@@ -1,5 +1,4 @@
 .screen {
-  background-color: hsl(224, 36%, 15%);
   margin: 20px 0;
   color: #fff;
   height: 100px;
@@ -10,4 +9,19 @@
 .second-value {
   font-size: 2.5rem;
   margin: 10px 0;
+}
+.screen.theme-one {
+  background-color: hsl(224, 36%, 15%);
+}
+.screen.theme-two {
+  background-color: #eeeeee;
+}
+.screen.theme-two > p {
+  color: #000;
+}
+.screen.theme-three {
+  background-color: #1e0836;
+}
+.screen.theme-three > p {
+  color: #dfc441;
 }

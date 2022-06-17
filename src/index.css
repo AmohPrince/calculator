@@ -7,12 +7,9 @@
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
+  transition: color, background-color 3s ease-out;
 }
 
-body {
-  height: 100vh;
-  background-color: hsl(222, 26%, 31%);
-}
 .flex {
   display: flex;
 }
