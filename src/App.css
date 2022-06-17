@@ -1,6 +1,6 @@
 .background {
-  height: 100%;
-  padding: 4.1%;
+  height: 100vh;
+  padding-top: 5%;
 }
 .background.theme-one {
   background-color: hsl(222, 26%, 31%);
@@ -90,5 +90,11 @@
 @media screen and (max-width: 650px) {
   .App {
     width: 90%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background {
+    padding-top: 17%;
   }
 }
